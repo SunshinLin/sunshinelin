@@ -18,4 +18,5 @@ public class page0 extends FrameLayout {
     private void init(){
         LayoutInflater.from(getContext()).inflate(R.layout.content_pager_0,this,true);
     }
+
 }

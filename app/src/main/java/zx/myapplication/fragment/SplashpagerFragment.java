@@ -67,10 +67,12 @@ public class SplashpagerFragment extends Fragment {
         list.add(new page1(getContext()));
         list.add(new page2(getContext()));
         splashadapter = new SplashAdapter(list, getContext());
-        indicator.setViewPager(viewPager);
+
         viewPager.setAdapter(splashadapter);
+        indicator.setViewPager(viewPager);
         viewPager.addOnPageChangeListener(pageChangeListener);
         viewPager.addOnPageChangeListener(phoneChangeListener);
+
     }
 
     @Override
@@ -117,7 +119,7 @@ public class SplashpagerFragment extends Fragment {
                //x，y轴进行同时变化
                layoutPhone.setScaleX(scale);
                layoutPhone.setScaleY(scale);
-               //疑问
+               //
                int scroll=(int)((positionOffset-0.7)*360);
                layoutPhone.setTranslationX(scroll);
                ivPhoneFont.setAlpha(positionOffset);
